@@ -8,9 +8,9 @@
  */
 public class Property {
 
-    private static int NUMBER_OF_PROPERTIES = 0;
+    private static int numberOfProperties = 0;
     private final String id;
-    private String model;
+    private String description;
     private double price;
 
     /**
@@ -26,7 +26,7 @@ public class Property {
     /**
      * Id selector.
      */
-    public String getId() {
+    public int getId() {
         
     }
 

@@ -8,9 +8,9 @@
  */
 public class User {
 
-    private static int NUMBER_OF_USERS = 0;
+    private static int numberOfUsers = 0;
     // The user id.
-    private final String id;
+    private final int id;
     // The user name.
     private String name;
     // The user phone.
@@ -26,7 +26,7 @@ public class User {
      * @param email The user email.
      */
     public User(String name, String phone, String email) {
-        this.id = Integer.toString(++NUMBER_OF_USERS);
+        this.id = ++numberOfUsers;
         this.name = (name != null) ? name : "";
         this.phone = (phone != null) ? phone : "";
         this.email = (email != null) ? email : "";
@@ -37,7 +37,7 @@ public class User {
      *
      * @return This user id.
      */
-    public String getId() {
+    public int getId() {
         return this.id;
     }
 

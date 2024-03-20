@@ -99,7 +99,7 @@ Tabela 2 - Objetos da fixtures para a classe CompanyTest<br/>
 
 Tabela 3 - Vendas a criar
 
-2. Crie na classe de teste **PropertyTest** o método de teste `testCreateSell`.
+2. Crie na classe de teste **CompanyTest** o método de teste `testCreateSell`.
 
 3. Em seguida, implemente o código interno do método `createSell`.
 
