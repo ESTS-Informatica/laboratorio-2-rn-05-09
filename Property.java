@@ -9,7 +9,7 @@
 public class Property {
 
     private static int numberOfProperties = 0;
-    private final String id;
+    private final int id;
     private String description;
     private double price;
 
