@@ -20,21 +20,23 @@ public class Property {
      * @param price The property price.
      */
     public Property(String description, double price) {
-
+        this.description = description;
+        this.price = price;
+        this.id = numberOfProperties++;
     }
 
     /**
      * Id selector.
      */
     public int getId() {
-        
+        return -1;
     }
 
     /**
      * Description selector.
      */
     public String getDescription() {
-
+        return description;
     }
 
     /**
@@ -50,7 +52,7 @@ public class Property {
      * Price selector.
      */
     public double getPrice() {
-        
+        return price;
     }
     
     /**
@@ -64,5 +66,6 @@ public class Property {
 
     @Override
     public String toString() {
+        return null;
     }
 }
