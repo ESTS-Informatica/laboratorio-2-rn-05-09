@@ -20,6 +20,8 @@ public class CompanyTest
     private Company company;
     private Property property1;
     private Property property2;
+    private Sell sell1;
+    private Sell sell2;
     /**
      * Construtor default para a classe de teste CompanyTest
      */
@@ -42,6 +44,8 @@ public class CompanyTest
         this.company = new Company();
         this.property1 = new Property("T3 Monte Belo", 150000.0);
         this.property2 = new Property("T5 Monte da Caparica", 470000.0);
+        this.sell1 = new Sell(client1,seller1,property1);
+        this.sell2 = new Sell(client2,seller2,property2);
     }
 
     /**
@@ -127,4 +131,27 @@ public class CompanyTest
     public void testRegisterPropertyNull(){
         assertFalse(company.registerProperty(null));
     }
+    
+    @Test
+    public void testCreateSell() {
+        company.registerClient(client1);
+        company.registerSeller(seller1);
+        company.registerProperty(property1);
+        assertTrue(company.createSell(client1, seller1, property1));
+    }
+    
+    @Test
+    public void testCalculateSellsOfYear() {
+        company.registerClient(client1);
+        company.registerSeller(seller1);
+        company.registerProperty(property1);
+        company.registerClient(client2);
+        company.registerSeller(seller2);
+        company.registerProperty(property2);
+        company.createSell(client1, seller1, property1);
+        company.createSell(client2, seller2, property2);
+        assertEquals(2, company.calculateSellsOfTheYear(2024));
+    }
+    
+    
 }
