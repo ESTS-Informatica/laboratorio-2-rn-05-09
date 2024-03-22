@@ -11,8 +11,10 @@ import org.junit.jupiter.api.Test;
  * @author  (seu nome)
  * @version (um número da versão ou uma data)
  */
+
 public class PropertyTest
 {
+    private Property property1;
     /**
      * Construtor default para a classe de teste PropertyTest
      */
@@ -28,6 +30,7 @@ public class PropertyTest
     @BeforeEach
     public void setUp()
     {
+        this.property1 = new Property("T3 Monte Belo", 150000.0);
     }
 
     /**
@@ -42,8 +45,7 @@ public class PropertyTest
     
     @Test
     public void testConstructor() {
-        Property property1 = new Property("T3 Monte Belo", 150000.0);
-        assertEquals(150000.0, property1.getPrice());
-        assertEquals("T3 Monte Belo", property1.getDescription());
+        assertEquals(150000.0, this.property1.getPrice());
+        assertEquals("T3 Monte Belo", this.property1.getDescription());
     }
 }
